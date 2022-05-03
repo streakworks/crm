@@ -38,10 +38,11 @@
         "yup": "^0.32.11"
     },
     "scripts": {
-        "predeploy":"npm run build",
-        "deploy":"gh-pages -d build",
+        "predeploy": "npm run winbuild",
+        "deploy": "gh-pages -d build",
         "start": "react-app-rewired --openssl-legacy-provider start",
-        "build": "GENERATE_SOURCEMAP=false react-scripts build",
+        "build": "react-scripts build",
+        "winbuild": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "ghp": "react-scripts  --openssl-legacy-provider build && gh-pages -d build"
